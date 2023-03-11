@@ -3,3 +3,6 @@ git commit -m "message" //将暂存区提交到本地仓库
 git status //查看modified文件，在工作区的改动显示红色文件，修改add到暂存区后显示为绿色，commit后不显示文件
 git checkout -- <file> //丢弃工作区的修改
 git restore --staged <file> //将暂存区的file退回到工作区
+git log //查看commit记录，reset后只能看到当前HEAD之前的commit
+git reflog //查看所有的commi和reset记录
+git reset --[soft]/[mixed]/[hard] <commit_id/HEAD>//表示回退commit_id的版本，soft/mixed/hard分别代表仓库级别回退/暂存区级别回退/本地工作区级别的回退
