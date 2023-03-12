@@ -25,6 +25,10 @@ git remote add origin <url> //关联远程仓库
 git remote remove <url> //删除远程关联
 git push origin <local_branch_name>:<remote_branch_name> //本地分支local_branch_name推送到远程remote_branch_name分支，remote_branch_name分支不存在则会新建远程分支
 git checkout -b <local_branch_name> <origin/remote_branch_name> //远程分支remote_branch_name拉去到本地local_branch_name，并检出至local_branch_name
-
+git pull origin <remote_branch_name>:<local_branch_name> //远程仓库分支remote_branch_name拉去到本地仓库分支local_branch_name
+git pull = git fetch + git merge
+git fetch origin <branch_name> //获取远程分支的代码仓库，但并未合入到本地代码仓库
+git merge origin/<branch_name> //将获取的远程仓库分支合并到本地仓库
+git push origin --delete <branch_name> //删除远程分支
 
 
