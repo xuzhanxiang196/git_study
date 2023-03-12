@@ -20,5 +20,11 @@ git stash clear //清空stash
 git merge <branch> //将branch分支合并到当前分支，修改完冲突后，再提交
 git merge --abort //撤回merge
 git branch --merged|--no-merged //查看已经merged或者no-merged 
+git remote -v //查看远程仓库名称
+git remote add origin <url> //关联远程仓库
+git remote remove <url> //删除远程关联
+git push origin <local_branch_name>:<remote_branch_name> //本地分支local_branch_name推送到远程remote_branch_name分支，remote_branch_name分支不存在则会新建远程分支
+git checkout -b <local_branch_name> <origin/remote_branch_name> //远程分支remote_branch_name拉去到本地local_branch_name，并检出至local_branch_name
+
 
 
