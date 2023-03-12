@@ -13,9 +13,12 @@ git checkout -b <branch> //新建分支branch并将HEAD指向branch
 git stash save "message" //将当前修改存到stash区，“message”为标签
 git stash list //查看stash列表
 git stash pop <stash_id> //弹出stash_id版本，stash_id可以从stash list中查看
+//注意：git stash pop后想要撤销，可以用git reset指令
 git stash apply <stash_id> //应用stash_id版本，并不删除stash
 git stash drop <stash_id> //删除stash_id的暂存
 git stash clear //清空stash
 git merge <branch> //将branch分支合并到当前分支，修改完冲突后，再提交
 git merge --abort //撤回merge
 git branch --merged|--no-merged //查看已经merged或者no-merged 
+
+
