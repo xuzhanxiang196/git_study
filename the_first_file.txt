@@ -2,3 +2,6 @@
 尝试reset命令
 尝试diff命令
 diff工作区与暂存区比较
+
+
+test分支提交一次commit
