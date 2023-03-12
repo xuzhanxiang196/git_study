@@ -6,3 +6,4 @@ diff工作区与暂存区比较
 main分支提交一次commit
 test分支提交一次commit
 测试merge
+test分支测试merge
