@@ -6,4 +6,8 @@ git restore --staged <file> //将暂存区的file退回到工作区
 git log //查看commit记录，reset后只能看到当前HEAD之前的commit
 git reflog //查看所有的commi和reset记录
 git reset --[soft]/[mixed]/[hard] <commit_id/HEAD>//表示回退commit_id的版本，soft/mixed/hard分别代表仓库级别回退/暂存区级别回退/本地工作区级别的回退
-git diff <file> / git diff HEAD <file> / git diff HEAD --cached <file> //分别表示工作区与暂存区，工作区与本地仓库，暂存区与本地仓库 
+git diff <file> / git diff HEAD <file> / git diff HEAD --cached <file> //分别表示工作区与暂存区，工作区与本地仓库，暂存区与本地仓库
+git checkout <branch> //切换分支
+git checkout -b <branch> //新建分支branch并将HEAD指向branch
+//注意：modified文件add到暂存区切换分支会保留，未add到暂存区是不能切换分支的，commit后modified文件消失，切换分之后修改不在
+ 
