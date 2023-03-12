@@ -10,4 +10,6 @@ git diff <file> / git diff HEAD <file> / git diff HEAD --cached <file> //分别�
 git checkout <branch> //切换分支
 git checkout -b <branch> //新建分支branch并将HEAD指向branch
 //注意：modified文件add到暂存区切换分支会保留，未add到暂存区是不能切换分支的，commit后modified文件消失，切换分之后修改不在
- 
+git merge <branch> //将branch分支合并到当前分支，修改完冲突后，再提交
+git merge --abort //撤回merge
+git branch --merged|--no-merged //查看已经merged或者no-merged 
