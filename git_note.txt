@@ -9,7 +9,13 @@ git reset --[soft]/[mixed]/[hard] <commit_id/HEAD>//表示回退commit_id的版�
 git diff <file> / git diff HEAD <file> / git diff HEAD --cached <file> //分别表示工作区与暂存区，工作区与本地仓库，暂存区与本地仓库
 git checkout <branch> //切换分支
 git checkout -b <branch> //新建分支branch并将HEAD指向branch
-//注意：modified文件add到暂存区切换分支会保留，未add到暂存区是不能切换分支的，commit后modified文件消失，切换分之后修改不在
+//注意：有修改的文件是不能直接切换分支的，无论是工作区还是暂存区的修改都不能切换分支，一般是先stash后再checkout，commit后modified文件消失，切换分之后修改不在
+git stash save "message" //将当前修改存到stash区，“message”为标签
+git stash list //查看stash列表
+git stash pop <stash_id> //弹出stash_id版本，stash_id可以从stash list中查看
+git stash apply <stash_id> //应用stash_id版本，并不删除stash
+git stash drop <stash_id> //删除stash_id的暂存
+git stash clear //清空stash
 git merge <branch> //将branch分支合并到当前分支，修改完冲突后，再提交
 git merge --abort //撤回merge
 git branch --merged|--no-merged //查看已经merged或者no-merged 
